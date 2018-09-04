@@ -1,0 +1,154 @@
+%\documentclass[a4paper,landscape,11pt]{article}
+\documentclass[a4paper,11pt]{article}
+%\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8x]{inputenc}
+%\usepackage[english,ukrainian,russian]{babel} 
+\usepackage[english,russian]{babel} 
+\usepackage{wrapfig}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{booktabs}
+\usepackage{pifont}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\usepackage{tikz}
+\usepackage{siunitx}
+\usepackage[american,cuteinductors,smartlabels]{circuitikz}
+
+\usepackage{advdate}
+%\usepackage{showframe}
+
+\setlength{\voffset}{-72pt} %отступ сверху - чтобы увидеть откомментарить \usepackage{showframe}
+\setlength{\voffset}{-36pt}
+\setlength{\footskip}{-20pt}
+\setlength{\topmargin}{0pt} 
+%\setlength{\headheight{1pt}
+\setlength{\headsep}{0pt}
+\setlength{\hoffset}{-72pt}
+\setlength{\marginparwidth}{0pt}
+\setlength{\textwidth}{530pt}
+\setlength{\textheight}{808pt}
+%\author{ Прокшин Артем \\
+%\small ЛЭТИ\\
+%\small \texttt{taybola@gmail.com}}
+
+%\title{Список группы}
+%\date{}
+%abcdefghijklmnop
+%         .
+
+\newcommand*\OK{&\small \ding{51}$\!\!_\circ$} % начал защищать
+\newcommand*\Ok{&\small \ding{51}$\!\!_\circ$} % начал защищатi
+\newcommand*\ok{&{\small \ding{51}}} % присутствовал
+\newcommand*\oK{&{\small \ding{51}?}} % присутствовал?
+\newcommand*\no{&{\small }} % отсутствовал
+\newcommand*\D{\tiny\ding{48}} % защита, defend
+\newcommand*\da{&{\small\ding{48}$\!\!_1$}} % защита, defend
+\newcommand*\dab{&{\small\ding{48}$\!\!^1_2$}} % защита, defend
+\newcommand*\ab{&{\small\ding{48}$\!\!^1_2$}} % защита, defend
+%\newcommand*\ab{&{\small\ding{48}$\!\!^1_2$}} % защита, defend
+\newcommand*\bc{&{\small\ding{48}$\!\!^2_3$}} % защита, defend
+\newcommand*\dabc{&{\small\ding{48}$\!\!^1_{23}$}} % защита, defend
+\newcommand*\dabcd{&{\small\ding{48}$\!\!^{12}_{34}$}} % защита, defend
+\newcommand*\ac{&{\small\ding{48}$\!\!^1_{23}$}} % защита, defend
+\newcommand*\db{&{\small\ding{48}$\!\!_2$}} % защита, defend
+\newcommand*\dc{&{\small\ding{48}$\!\!_3$}} % защита, defend
+\newcommand*\dd{&{\small\ding{48}$\!\!_4$}} % защита, defend
+\newcommand*\bd{&{\small\ding{48}$\!\!^2_{34}$}} % защита, defend
+\newcommand*\de{&{\small\ding{48}$\!\!_5$}} % защита, defend
+\newcommand*\dE{&{\small\ding{48}$\!\!^4_5$}} % защита, defend
+\newcommand*\cd{&{\small\ding{48}$\!\!^3_4$}} % защита, defend
+\newcommand*\dg{&{\small\ding{48}$\!\!_6$}} % защита, defend
+\newcommand*\fg{&{\small\ding{48}$\!\!^6_7$}} % защита, defend
+\newcommand*\dH{&{\small\ding{48}$\!\!^8$}} % защита, defend
+\newcommand*\gh{&{\small\ding{48}$\!\!^7_8$}} % защита, defend
+\newcommand*\fh{&{\small\ding{48}$\!\!^7_{89}$}} % защита, defend
+\newcommand*\Skip{\noindent\rule{0.3cm}{0.9pt}}
+
+
+\begin{document}
+%\thispagestyle{empty}
+% or
+\pagenumbering{gobble}
+%\AdvanceDate[1] % печатаю в пятницу а нужна суббота
+\begin{center}\today\end{center}
+\vspace*{1\baselineskip}
+
+%\maketitle
+%\skippage 
+%\begin{table} \centering 
+%\hspace{-3cm}
+	\begin{tabular}{p{7pt}|l|p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}}% @{}}
+\multicolumn{25}{c}{График выполнения лабораторных работ студентами 8871 группы} \\ 
+%\multicolumn{4}{c}{Ведомость посещения занятий по инфоматике студентами 7871 группы} \\
+\toprule
+%&&&&&\\
+&&&&&\\
+&&&&&\\
+&&&&&\\
+&&&&&\\
+&&&&&\\
+&&&&&\\
+&&\rotatebox{90}{\rlap{\small 4 сентября (прак.)}}
+%&\rotatebox{90}{\rlap{\small 6 сентября (прак.)}}
+%&\rotatebox{90}{\rlap{\small 9 сентября (прак.)}}
+%&\rotatebox{90}{\rlap{\small 11 сентября (лаб.)}}
+%&\rotatebox{90}{\rlap{\small 12 сентября (прак.)}}
+%&\rotatebox{90}{\rlap{\small 13 сентября (прак.)}}
+%&\rotatebox{90}{\rlap{\small 16 сентября (лаб.)}}
+%&\rotatebox{90}{\rlap{\small 19 сентября (лек.)}}
+%&\rotatebox{90}{\rlap{\small 25 сентября (лаб.)}}
+%&\rotatebox{90}{\rlap{\small 26 сентября (лек.)}} 
+%&\rotatebox{90}{\rlap{\small 23 октября (лаб.)}}
+%&\rotatebox{90}{\rlap{\small 24 октября (лек.)}}
+%&\rotatebox{90}{\rlap{\small 31 октября (лек.)}}
+%&\rotatebox{90}{\rlap{\small 6 ноября (лаб.)}}
+%&\rotatebox{90}{\rlap{\small 7 ноября (прак.)}} 
+%&\rotatebox{90}{\rlap{\small 20 ноября (лаб.)}}
+%&\rotatebox{90}{\rlap{\small 21 ноября (лек.)}}
+%&\rotatebox{90}{\rlap{\small 28 ноября (прак.)}}
+%&\rotatebox{90}{\rlap{\small 4 декабря (лаб.)}}
+%&\rotatebox{90}{\rlap{\small 5 декабря (лек.)}}
+%&\rotatebox{90}{\rlap{\small 12 декабря (прак.)}}
+%&\rotatebox{90}{\rlap{\small 18 декабря (лаб.)}}
+%&\rotatebox{90}{\rlap{\small 19 декабря (лаб.)}}
+\\
+\midrule
+ 1\,&Авсюкевич Станислав Витальевич&\ok\\
+ 2\,&Баранова Дарья Дмитриевна&\ok\\
+ 3\,&Бедарев Филипп Денисович&\ok\\
+ 4\,&Домнин Александр Вячеславович&\ok\\
+ 5\,&Жилинский Алексей Андреевич&\ok\\
+ 6\,&Жуков Алексей Сергеевич&\no\\
+ 7\,&Зацепина Марина Евгеньевна&\no\\
+ 8\,&Ковлягин Владислав Витальевич&\ok\\
+ 9\,&Колмагоров Максим Александрович&\ok\\
+10\,&Колодяжный Владимир Юрьевич&\no\\
+\midrule
+11\,&Комаров Александр Вадимович&\ok\\
+12\,&Комиссаров Владимир Романович&\ok\\
+13\,&Логачева Дарья Васильевна&\no\\
+14\,&Лоскутов Дмитрий Андреевич&\ok\\
+15\,&Луценко Сергей Викторович&\ok\\
+16\,&Матвеев Николай Сергеевич&\ok\\
+17\,&Орлов Дмитрий Антонович&\ok\\
+18\,&Панюшкин Вячеслав Александрович&\ok\\
+19\,&Полупанов Павел Константинович&\no\\
+20\,&Пономарев Василий Васильевич&\ok\\
+\midrule
+21\,&Прокофьев Иван Алексеевич&\ok\\ 
+22\,&Прокудин Борис Сергеевич&\ok\\
+23\,&Рахманов Максим Алексеевич&\ok\\
+24\,&Смородинов Александр Анатольевич&\no\\
+25\,&Тараканов Михаил Егорович&\ok\\
+26\,&Турыгин Данила Александрович&\ok\\
+27\,&Храпов Михаил Васильевич&\ok\\
+28\,&Штибель Егор Олегович&\no\\
+29\,&Штук Андрей Константинович&\ok\\
+30\,&Яценко Антон Валерьевич&\ok\\
+31\,&Шкуридин Игорь Сергеевич&\ok\\
+32\,&Веренёв Андрей Александровч&\ok\\
+33\,&Мошкин Кирилл Владимирович&\ok\\
+\bottomrule
+\end{tabular} 
+\end{document}
