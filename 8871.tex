@@ -15,6 +15,8 @@
 \usepackage{siunitx}
 \usepackage[american,cuteinductors,smartlabels]{circuitikz}
 
+\usepackage{hyperref}
+
 \usepackage{advdate}
 %\usepackage{showframe}
 
@@ -72,14 +74,14 @@
 %\thispagestyle{empty}
 % or
 \pagenumbering{gobble}
-\AdvanceDate[-3] % печатаю в субботу а нужна пятница
+\AdvanceDate[-2] % печатаю в субботу а нужна пятница
 \begin{center}\today\end{center}
 \vspace*{1\baselineskip}
 
 %\maketitle
 %\skippage 
 %\begin{table} \centering 
-%\hspace{-3cm}
+\hspace{-2cm}
 	\begin{tabular}{p{7pt}|l|p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}p{6pt}}% @{}}
 \multicolumn{13}{c}{График выполнения лабораторных работ студентами 8871 группы} \\ 
 %\multicolumn{4}{c}{Ведомость посещения занятий по инфоматике студентами 7871 группы} \\
@@ -106,8 +108,8 @@
 &\rotatebox{90}{\rlap{\small 16 октября (лaб.)}}
 &\rotatebox{90}{\rlap{\small 19 октября (лек.)}}
 &\rotatebox{90}{\rlap{\small 23 октября (лаб.)}} 
-%&\rotatebox{90}{\rlap{\small 20 ноября (лаб.)}}
-%&\rotatebox{90}{\rlap{\small 21 ноября (лек.)}}
+&\rotatebox{90}{\rlap{\small 26 октября (прак.)}}
+&\rotatebox{90}{\rlap{\small 30 октября (лаб.)}}
 %&\rotatebox{90}{\rlap{\small 28 ноября (прак.)}}
 %&\rotatebox{90}{\rlap{\small 4 декабря (лаб.)}}
 %&\rotatebox{90}{\rlap{\small 5 декабря (лек.)}}
@@ -117,89 +119,89 @@
 		&&
 \\
 \midrule
- 1\,&Авсюкевич Станислав Витальевич	\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\\
- 2\,&Баранова Дарья Дмитриевна		\ok\no\no\no\\
- 3\,&Бедарев Филипп Денисович		\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\no\ok\da\ok\ok\\
- 4\,&Домнин Александр Вячеславович	\ok\ok\ok\ok\da\ok\ok\ok\db\ok\dd\ok\dc\ok\no\\
- 5\,&Жилинский Алексей Андреевич	\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\\
+ 1\,&Авсюкевич Станислав Витальевич	\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\da\\
+% 2\,&Баранова Дарья Дмитриевна		\ok\no\no\no\\
+ 3\,&Бедарев Филипп Денисович		\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\no\ok\da\ok\ok\ok\no\\
+ 4\,&Домнин Александр Вячеславович	\ok\ok\ok\ok\da\ok\ok\ok\db\ok\dd\ok\dc\ok\no\no\de\\
+ 5\,&Жилинский Алексей Андреевич	\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\no\\
 % 6\,&Жуков Алексей Сергеевич		\no\no\no\no\\
- 7\,&Зацепина Марина Евгеньевна		\no\ok\ok\ok\Ok\ok\ok\ok\da\ok\dd\ok\db\ok\ok\\
- 8\,&Ковлягин Владислав Витальевич	\ok\ok\ok\ok\ok\ok\da\ok\ok\ok\ok\ok\dd\ok\ok\\
- 9\,&Колмагоров Максим Александрович	\ok\ok\ok\ok\ok\ok\ok\ok\da\ok\ok\ok\Ok\ok\ok\\
+ 7\,&Зацепина Марина Евгеньевна		\no\ok\ok\ok\Ok\ok\ok\ok\da\ok\dd\ok\db\ok\ok\ok\dc\\
+ 8\,&Ковлягин Владислав Витальевич	\ok\ok\ok\ok\ok\ok\da\ok\ok\ok\ok\ok\dd\ok\ok\ok\ok\\
+ 9\,&Колмагоров Максим Александрович	\ok\ok\ok\ok\ok\ok\ok\ok\da\ok\ok\ok\Ok\ok\ok\ok\ok\\
 \midrule
-10\,&Колодяжный Владимир Юрьевич	\no\no\ok\no\\
-11\,&Комаров Александр Вадимович	\ok\ok\ok\no\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\\
-12\,&Комиссаров Владимир Романович	\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\\
+%10\,&Колодяжный Владимир Юрьевич	\no\no\ok\no\\
+11\,&Комаров Александр Вадимович	\ok\ok\ok\no\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\dd\\
+12\,&Комиссаров Владимир Романович	\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\\
 %13\,&Логачева Дарья Васильевна		\no\no\no\no\\
-14\,&Лоскутов Дмитрий Андреевич		\ok\ok\ok\ok\ok\ok\ok\ok\da\ok\dd\ok\ok\ok\ok\\
-15\,&Луценко Сергей Викторович		\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\no\\
-16\,&Матвеев Николай Сергеевич		\ok\ok\no\ok\ok\ok\no\ok\no\ok\no\ok\no\no\no\\
-17\,&Орлов Дмитрий Антонович		\ok\ok\no\ok\no\ok\\
-18\,&Панюшкин Вячеслав Александрович	\ok\ok\ok\ok\ok\ok\no\ok\da\ok\dE\ok\no\ok\no\\
+14\,&Лоскутов Дмитрий Андреевич		\ok\ok\ok\ok\ok\ok\ok\ok\da\ok\dd\ok\ok\ok\ok\ok\ok\\
+15\,&Луценко Сергей Викторович		\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\no\no\ok\\
+16\,&Матвеев Николай Сергеевич		\ok\ok\no\ok\ok\ok\no\ok\no\ok\no\ok\\
+%17\,&Орлов Дмитрий Антонович		\ok\ok\no\ok\no\ok\\
+18\,&Панюшкин Вячеслав Александрович	\ok\ok\ok\ok\ok\ok\no\ok\da\ok\dE\ok\no\ok\no\ok\no\\
 \midrule
-19\,&Полупанов Павел Константинович	\no\no\no\ok\ok\\
-20\,&Пономарев Василий Васильевич	\ok\ok\ok\ok\ok\no\ok\ok\no\ok\dd\ok\no\ok\no\\
-21\,&Прокофьев Иван Алексеевич		\ok\ok\ok\ok\ok\no\ok\ok\ok\ok\ok\ok\ok\no\ok\\ 
-22\,&Прокудин Борис Сергеевич		\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\dd\ok\da\ok\ok\\
-23\,&Рахманов Максим Алексеевич		\ok\ok\ok\ok\ok\ok\ok\ok\da\ok\dd\ok\ok\ok\ok\\
-24\,&Смородинов Александр Анатольевич	\no\no\no\ok\\
-25\,&Тараканов Михаил Егорович		\ok\ok\ok\ok\ok\ok\no\ok\ok\ok\ok\no\no\ok\ok\\
-26\,&Турыгин Данила Александрович	\ok\ok\ok\ok\Ok\ok\ok\ok\ok\ok\dd\ok\ok\ok\ce\\
-27\,&Храпов Михаил Васильевич		\ok\ok\ok\ok\no\no\ok\ok\ok\ok\dd\ok\ok\ok\da\\
+%19\,&Полупанов Павел Константинович	\no\no\no\ok\ok\\
+20\,&Пономарев Василий Васильевич	\ok\ok\ok\ok\ok\no\ok\ok\no\ok\dd\ok\no\ok\no\ok\no\\
+21\,&Прокофьев Иван Алексеевич		\ok\ok\ok\ok\ok\no\ok\ok\ok\ok\ok\ok\ok\no\ok\no\no\\ 
+22\,&Прокудин Борис Сергеевич		\ok\ok\ok\ok\ok\ok\ok\ok\ok\ok\dd\ok\da\ok\ok\ok\ok\\
+23\,&Рахманов Максим Алексеевич		\ok\ok\ok\ok\ok\ok\ok\ok\da\ok\dd\ok\ok\ok\ok\ok\no\\
+%24\,&Смородинов Александр Анатольевич	\no\no\no\ok\\
+25\,&Тараканов Михаил Егорович		\ok\ok\ok\ok\ok\ok\no\ok\ok\ok\ok\no\no\ok\ok\ok\no\\
+26\,&Турыгин Данила Александрович	\ok\ok\ok\ok\Ok\ok\ok\ok\ok\ok\dd\ok\ok\ok\ce\ok\ok\\
+27\,&Храпов Михаил Васильевич		\ok\ok\ok\ok\no\no\ok\ok\ok\ok\dd\ok\ok\ok\da\ok\ok\\
 \midrule
-28\,&Штибель Егор Олегович		\no\no\ok\\
-29\,&Штук Андрей Константинович		\ok\ok\ok\ok\ok\ok\no\ok\da\ok\dd\ok\ce\ok\ok\\
-30\,&Яценко Антон Валерьевич		\ok\ok\ok\ok\Ok\no\ok\no\ok\ok\ad\no\no\no\ok\\
-31\,&Шкуридин Игорь Сергеевич		\ok\no\ok\ok\ok\ok\ok\ok\no\ok\dd\no\no\no\ok\\
-32\,&Веренёв Андрей Александрович	\ok\ok\ok\ok\ok\ok\da\no\ok\ok\ok\ok\db\ok\ok\\
-33\,&Мошкин Кирилл Владимирович		\ok\ok\ok\ok\ok\ok\no\ok\ok\ok\no\no\no\no\no\\
+%28\,&Штибель Егор Олегович		\no\no\ok\\
+29\,&Штук Андрей Константинович		\ok\ok\ok\ok\ok\ok\no\ok\da\ok\dd\ok\ce\ok\ok\ok\ok\\
+30\,&Яценко Антон Валерьевич		\ok\ok\ok\ok\Ok\no\ok\no\ok\ok\ad\no\no\no\ok\ok\ok\\
+31\,&Шкуридин Игорь Сергеевич		\ok\no\ok\ok\ok\ok\ok\ok\no\ok\dd\no\no\no\ok\ok\no\\
+32\,&Веренёв Андрей Александрович	\ok\ok\ok\ok\ok\ok\da\no\ok\ok\ok\ok\db\ok\ok\ok\db\\
+33\,&Мошкин Кирилл Владимирович		\ok\ok\ok\ok\ok\ok\no\ok\ok\ok\\
 \bottomrule
 \end{tabular} 
 
 \newpage
 %
 \hspace{-2.1cm}
-\begin{tabular}{l|ccccccccccccccc}
-\multicolumn{11}{c}{выполнение практических работ, 8871 группа} \\
+\begin{tabular}{l|llccccccccccccc}
+\multicolumn{10}{c}{выполнение практических работ, 8871 группа} \\
 \toprule
-                        &$\Theta$&$\alpha$&схема&пр.№1&пр.№2&пр.№3&пр.№4&пр.№5&пр.№6&пр.№7\\
+                        &$\Theta/\alpha$&схема&\,пр.№1\,&пр.№2&пр.№3&пр.№4&пр.№5&пр.№6&пр.№7\\
 \midrule
-Авсюкевич Станислав Витальевич	&65&35 &&26.09       &&\\
-Баранова Дарья Дмитриевна       &  &   &&       &&\\
-Бедарев Филипп Денисович        &70&105&&       &&\\
-Домнин Александр Вячеславович   &65&30 &&16.09- &14.10&16.10\\ 
-Жилинский Алексей Андреевич	&70&25 &&       &&\\
+\href{https://github.com/Avsyukevich/ETU-8871}{Авсюкевич Станислав Витальевич}	        &65/35 &$\frac{2\pi}{3}z,\frac{5\pi}{6}y$&\,26.09\,&&\\
+%Баранова Дарья Дмитриевна       &  &   &&       &&\\
+Бедарев Филипп Денисович        &70/105&$\frac{2\pi}{3}z,\frac{\pi}{3}y$&       &&\\
+\href{https://github.com/Sanzec1983/pr}{Домнин Александр Вячеславович}                  &65/30 &$\frac{2\pi}{3}z,\frac{\pi}{6}y$&\,16.09-\,&14.10&16.10&31.10\\ 
+Жилинский Алексей Андреевич	&70/25 &&       &&\\
 %Жуков Алексей Сергеевич		&&&&       &&\\
-Зацепина Марина Евгеньевна	&135&20&&15.09  &&\\	
-Ковлягин Владислав Витальевич	&80&30 &&28.09  &&\\
-Колмагоров Максим Александрович	&60&20 &&21.09  &11.10&\\
+\href{https://github.com/ZatsepinaME/Practicheskie-raboti}{Зацепина Марина Евгеньевна}	&135/20&$\frac{\pi}{3}z,\frac{5\pi}{6}y$&\,15.09\,&&\\	
+\href{https://github.com/Maestro7228}{Ковлягин Владислав Витальевич}	                &80/30 &$\frac{\pi}{3}z,\frac{2\pi}{3}y$&\,28.09\,&&\\
+\href{https://github.com/Kolmagorov-maxim}{Колмагоров Максим Александрович}	        &60/20 &$-\frac{\pi}{6}z,\frac{5\pi}{6}y$&\,21.09\,&11.10&24.10\\
 \midrule                                     
-Колодяжный Владимир Юрьевич	&  &   &&       &&\\
-Комаров Александр Вадимович	&140&35&&15.09  &&\\
-Комиссаров Владимир Романович	&150&25&&       &&\\
+%Колодяжный Владимир Юрьевич	&  &   &&       &&\\
+Комаров Александр Вадимович	&140/35&$\frac{\pi}{3}z,\frac{\pi}{6}y$&\,15.09\,&&\\
+Комиссаров Владимир Романович	&150/25&$\frac{\pi}{6}z,\frac{5\pi}{6}y$&       &&\\
 %Логачева Дарья Васильевна	&&&&       &&\\	
-Лоскутов Дмитрий Андреевич	&135&15&&       &&\\	
-Луценко Сергей Викторович	&140&25&&       &&\\	
-Матвеев Николай Сергеевич	&60&15 &&       &&\\	
-Орлов Дмитрий Антонович		&  &   &&       &&\\
-Панюшкин Вячеслав Александрович	&70&20 &&16.09- &\\
+Лоскутов Дмитрий Андреевич	&135/15&$\frac{\pi}{6}z,\frac{2\pi}{3}y$&       &&\\	
+Луценко Сергей Викторович	&140/25&&       &&\\	
+Матвеев Николай Сергеевич	&60/15 &&       &&\\	
+%Орлов Дмитрий Антонович		&  &   &&       &&\\
+Панюшкин Вячеслав Александрович\,&70/20 &$\!-\!\frac{2\pi}{3}z\!-\!\frac{5\pi}{6}y\!$&\,16.09-\,&\\
 \midrule                                  
-Полупанов Павел Константинович	&   &  &&       &\\
-Пономарев Василий Васильевич	&140&35&&       &\\
-Прокофьев Иван Алексеевич	&65&15 &&       &\\	
-Прокудин Борис Сергеевич	&65&30 &&       &\\	
-Рахманов Максим Алексеевич	&130&30&&       &\\	
-Смородинов Александр Анатольевич&   &  &&       &\\	
-Тараканов Михаил Егорович	&140&55&&       &\\	
-Турыгин Данила Александрович	&115&20&&16.09- &\\
-Храпов Михаил Васильевич	&60&25 &&       &\\	
+%Полупанов Павел Константинович	&   &  &&       &\\
+Пономарев Василий Васильевич	&140/35&$\frac{\pi}{6}y,\frac{\pi}{3}z$&       &\\
+Прокофьев Иван Алексеевич	&65/15 &&       &\\	
+Прокудин Борис Сергеевич	&65/30 &$\frac{\pi}{6}y,\frac{2\pi}{3}z$&       &\\	
+\href{https://github.com/morloksRakhmanov/-}{Рахманов Максим Алексеевич}	        &130/30&$\frac{\pi}{6}y,\frac{5\pi}{6}z$&2.10&2.10&\\	
+%Смородинов Александр Анатольевич&   &  &&       &\\	
+Тараканов Михаил Егорович	&14/55&$\frac{\pi}{3}y,\frac{\pi}{3}z$&       &\\	
+\href{https://github.com/daturygin/informatika}{Турыгин Данила Александрович}	        &115/20&$\frac{\pi}{3}y,\frac{2\pi}{3}z$&\,16.09-\,&28.10\\
+Храпов Михаил Васильевич	&60/25 &$\frac{2\pi}{3}y,\frac{\pi}{6}z$&       &\\	
 \midrule                                    
-Штибель Егор Олегович		&  &   &&       &\\
-Штук Андрей Константинович	&65&35 &&       &\\	
-Яценко Антон Валерьевич		&  &   &&       &\\
-Шкуридин Игорь Сергеевич	&110&30&&       &\\	
-Веренёв Андрей Александрович	&  &   &&15.09  &\\
-Мошкин Кирилл Владимирович	&80&50 &&       &\\	
+%Штибель Егор Олегович		&  &   &&       &\\
+\href{https://github.com/TIFON24/Workinf}{Штук Андрей Константинович}	                &65/35 &$-\frac{\pi}{3}y,\frac{\pi}{3}z$&1.10&9.10\\	
+Яценко Антон Валерьевич		&  &$\frac{2\pi}{3}y,\frac{5\pi}{6}z$&       &\\
+Шкуридин Игорь Сергеевич	&110/30&$\frac{\pi}{7}y,\frac{2\pi}{7}z$&       &\\	
+Веренёв Андрей Александрович	&  &$-\!\frac{\pi}{3}y\!-\!\frac{2\pi}{3}z\!$&\,15.09\,&\\
+%Мошкин Кирилл Владимирович	&80/50 &&       &\\	
 \bottomrule
 \end{tabular}
 \end{document}
