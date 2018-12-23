@@ -1,0 +1,196 @@
+% https://tex.stackexchange.com/questions/67254/stretching-text-vertically
+% https://tex.stackexchange.com/questions/18157/rotating-a-letter
+
+%\documentclass[a4paper,12pt]{scrartcl}
+\documentclass[a4paper,12pt]{article}
+\usepackage{mathtext}
+\usepackage{cmap}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+%\usepackage[left=1cm,right=1cm,top=1cm,bottom=2cm]{geometry}
+\usepackage{tikz}
+\usepackage{dsfont}
+\usepackage{graphicx}
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+%\usepackage{stackengine}
+%\usepackage{scalerel}
+
+\begin{document}
+
+\newcommand{\vectorcol}[2]{%
+	\mathrel{\raisebox{-0.25cm}{\scalebox{0.75}[3.1]{#1}$_#2$}}%
+}
+
+\underline{{\bfЗадание 1.}} собственные числа и собственные вектора матрицы $\mathds{A}$ удовлетворяют уравнению:
+
+\begin{equation}
+\mathds{A}\cdot\vec{V}_i = \lambda_i \vec{V}_i 
+\end{equation}
+где $\vec{V}_i$ -- вектор-столбец, соответствующий собственному числу $ \lambda_i$.
+
+
+\underline{{\bf Пояснение к заданию 2.}}
+
+Умножим матрицу  $\mathds{A}$ на матрицу состоящую из вектор-столбцов собственных векторов
+\begin{equation}
+%\mathds{A}\cdot\raisebox{-1 cm}{\scalebox{0.75}[3]{V}_1} \scalebox{0.75}[3]{V}_2 \scalebox{0.75}[3]{V}_3
+\mathds{A}\cdot\left(\raisebox{-0.25cm}{\scalebox{0.75}[3.1]{V}$_1$} \vectorcol{V}{2} \vectorcol{V}{3}\right)
+=
+\left(\lambda_1\!\!\vectorcol{V}{1}\:\lambda_2\!\!\vectorcol{V}{2}\:\lambda_3\!\!\vectorcol{V}{3}\right)
+	\label{uravneniea}
+\end{equation}
+
+Возьмём вектора с тильдами 
+$\widetilde{\vectorcol{V}{1}}$, $\widetilde{\vectorcol{V}{2}}$ и $\widetilde{\vectorcol{V}{3}}$
+такие что скалярные произведения векторов $(\widetilde{\vec{V}}_i \cdot \vec{V}_k)$ 
+записанные в виде ``строка на столбец'' удовлетворяют условию:
+
+\begin{equation}
+	(\widetilde{\vec{V}}_i \cdot \vec{V}_k) \;= \;
+\rotatebox{90}{\raisebox{-0.25cm}{\scalebox{0.75}[3.1]{$\widetilde{V}$}$_{\!\!i}$}}\;\cdot \vectorcol{V}{k}
+=
+\left\{\begin{array}{l}0, \textcyrillic{ если }i\neq k \\1, \textcyrillic{ если }i=k  \end{array}\right.
+\label{Kroneker}
+\end{equation}
+
+Составим матрицу строки которой состоят из координат векторов $\widetilde{\vec{V}}_i$: 
+\begin{equation}
+\left(
+\begin{array}{l}
+	\rotatebox{90}{\raisebox{-0.25cm}{\scalebox{0.75}[3.1]{$\widetilde{V}$}$_{\!\!1}$}} \\
+	\rotatebox{90}{\raisebox{-0.25cm}{\scalebox{0.75}[3.1]{$\widetilde{V}$}$_{\!\!2}$}} \\
+	\rotatebox{90}{\raisebox{-0.25cm}{\scalebox{0.75}[3.1]{$\widetilde{V}$}$_{\!\!3}$}}
+\end{array}
+\right)
+	\label{reverse}
+\end{equation}
+
+Из условий (\ref{Kroneker}) очевидно, что 
+\begin{equation}
+\left(
+\begin{array}{l}
+        \rotatebox{90}{\raisebox{-0.25cm}{\scalebox{0.75}[3.1]{$\widetilde{V}$}$_{\!\!1}$}} \\
+        \rotatebox{90}{\raisebox{-0.25cm}{\scalebox{0.75}[3.1]{$\widetilde{V}$}$_{\!\!2}$}} \\
+        \rotatebox{90}{\raisebox{-0.25cm}{\scalebox{0.75}[3.1]{$\widetilde{V}$}$_{\!\!3}$}}
+\end{array}
+\right)
+\cdot
+\left(\vectorcol{V}{1}\:\vectorcol{V}{2}\:\vectorcol{V}{3}\right) =
+\left(
+\begin{array}{ccc}
+        1 \\
+        & 1 \\
+        && 1
+\end{array}
+\right)
+	\label{equalone}
+\end{equation}
+
+Произведение матриц равно единичной матрице. отсюда следует, что матрица $
+\left(
+\begin{array}{l}
+        \rotatebox{90}{\raisebox{-0.25cm}{\scalebox{0.75}[3.1]{$\widetilde{V}$}$_{\!\!1}$}} \\
+        \rotatebox{90}{\raisebox{-0.25cm}{\scalebox{0.75}[3.1]{$\widetilde{V}$}$_{\!\!2}$}} \\
+        \rotatebox{90}{\raisebox{-0.25cm}{\scalebox{0.75}[3.1]{$\widetilde{V}$}$_{\!\!3}$}}
+\end{array}
+\right)
+$ есть обратная матрица к матрице $\left(\vectorcol{V}{1} \vectorcol{V}{2} \vectorcol{V}{3}\right)$:
+
+$$
+\left(
+\begin{array}{l}
+        \rotatebox{90}{\raisebox{-0.25cm}{\scalebox{0.75}[3.1]{$\widetilde{V}$}$_{\!\!1}$}} \\
+        \rotatebox{90}{\raisebox{-0.25cm}{\scalebox{0.75}[3.1]{$\widetilde{V}$}$_{\!\!2}$}} \\
+        \rotatebox{90}{\raisebox{-0.25cm}{\scalebox{0.75}[3.1]{$\widetilde{V}$}$_{\!\!3}$}}
+\end{array}
+\right) =
+\left(\vectorcol{V}{1} \vectorcol{V}{2} \vectorcol{V}{3}\right)^{-1}
+$$
+
+Из за того, что матрица (\ref{reverse}) обратная к матрице составленной из собственных векторов-столбцов
+их можно переставлять местами:
+
+$$
+\left(\vectorcol{V}{1}\:\vectorcol{V}{2}\:\vectorcol{V}{3}\right)\cdot
+\left(
+\begin{array}{l}
+        \rotatebox{90}{\raisebox{-0.25cm}{\scalebox{0.75}[3.1]{$\widetilde{V}$}$_{\!\!1}$}} \\
+        \rotatebox{90}{\raisebox{-0.25cm}{\scalebox{0.75}[3.1]{$\widetilde{V}$}$_{\!\!2}$}} \\
+        \rotatebox{90}{\raisebox{-0.25cm}{\scalebox{0.75}[3.1]{$\widetilde{V}$}$_{\!\!3}$}}
+\end{array}
+\right) =
+\left(
+\begin{array}{ccc}
+        1 \\
+        & 1 \\
+        && 1
+\end{array}
+\right)
+$$
+
+Умножая обратную матрицу слева на левую и правую части уравнения (\ref{uravneniea}) получаем
+
+\begin{equation}
+\left(
+\begin{array}{l}
+        \rotatebox{90}{\raisebox{-0.25cm}{\scalebox{0.75}[3.1]{$\widetilde{V}$}$_{\!\!1}$}} \\
+        \rotatebox{90}{\raisebox{-0.25cm}{\scalebox{0.75}[3.1]{$\widetilde{V}$}$_{\!\!2}$}} \\
+        \rotatebox{90}{\raisebox{-0.25cm}{\scalebox{0.75}[3.1]{$\widetilde{V}$}$_{\!\!3}$}}
+\end{array}
+\right)
+\cdot 
+\mathds{A}\cdot\left(\raisebox{-0.25cm}{\scalebox{0.75}[3.1]{V}$_1$} \vectorcol{V}{2} \vectorcol{V}{3}\right) = 
+\left(
+\begin{array}{l}
+        \rotatebox{90}{\raisebox{-0.25cm}{\scalebox{0.75}[3.1]{$\widetilde{V}$}$_{\!\!1}$}} \\
+        \rotatebox{90}{\raisebox{-0.25cm}{\scalebox{0.75}[3.1]{$\widetilde{V}$}$_{\!\!2}$}} \\
+        \rotatebox{90}{\raisebox{-0.25cm}{\scalebox{0.75}[3.1]{$\widetilde{V}$}$_{\!\!3}$}}
+\end{array}
+\right)
+\cdot
+\left(\lambda_1\!\!\vectorcol{V}{1}\lambda_2\!\!\vectorcol{V}{2}\lambda_3\!\!\vectorcol{V}{3}\right)
+=
+\left(
+\begin{array}{ccc}
+	\!\lambda_1\!\\
+	&\!\lambda_2\!\\
+	&&\!\lambda_3\!
+\end{array}
+\right)
+	\label{transformation}
+\end{equation}
+
+
+Предъявим вектора $\widetilde{\vec{V}}_i$. 
+
+Для этого заметим, что результат векторного произведения векторов перпендикулярен
+векторам из которых оно состоит. Это значит что $\widetilde{\vec{V}}_i$ пропорционален векторному произведению
+$[\vec{V}_k \times \vec{V}_l]$, где $i\neq k$ и $i\neq l$.
+
+
+$$
+\widetilde{\vec{V}}_i \sim [\vec{V}_k \times \vec{V}_l]
+$$
+
+Коэффициент пропорциональности выберем таким чтобы скалярное произведение равнялось 
+$1 = (\widetilde{\vec{V}}_i\cdot \vec{V}_i) = 
+\rotatebox{90}{\raisebox{-0.25cm}{\scalebox{0.75}[3.1]{$\widetilde{V}$}$_{\!\!i}$}}\;\cdot \vectorcol{V}{i}$ 
+когда индексы $i$ совпадают.
+
+\begin{equation}
+\vectorcol{V}{i} \;=\;
+\widetilde{\vec{V}}_i = \frac{[\vec{V}_k \times \vec{V}_l]}
+{ (\vec{V}_i \cdot [\vec{V}_k \times \vec{V}_l])}
+	\label{findreverse}
+\end{equation}
+
+\underline{{\bfЗадание 2.}}
+
+По уравнению (\ref{findreverse}) найти обратную матрицу матрице
+составленной из собвстенных вектор-столбцов.
+
+Доказать, что верны соотношение (\ref{equalone}) и соотношение (\ref{transformation}).  
+
+
+\end{document}
